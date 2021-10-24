@@ -7,7 +7,7 @@ public class GlobalGameHandler : MonoBehaviour
 {
     public bool isDead = false;
     public static GlobalGameHandler gameHandler;
-    public GameObject gameOverScreen;
+    private GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -20,6 +20,7 @@ public class GlobalGameHandler : MonoBehaviour
     }
 
     public int health;
+    private GameObject exitButton, continueButton;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,16 @@ public class GlobalGameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        assignGameOverScreenIfNull();
-        checkIfPlayerDied();
-        showGameOverIfDead();
+
+        //assignGameOverScreenIfNull();
+        //checkIfPlayerDied();
+        //showGameOverIfDead();
         
+    }
+
+    public void endBattle()
+    {
+        health = 4;
     }
 
     public void buttonExitGame()
@@ -44,7 +51,11 @@ public class GlobalGameHandler : MonoBehaviour
 
     public void buttonRetryLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverScreen.GetComponentInChildren<Canvas>().enabled = false;
+        exitButton.GetComponent<Canvas>().enabled = false;
+        continueButton.GetComponent<Canvas>().enabled = false;
+        health = 4;
     }
 
     private void assignGameOverScreenIfNull()
@@ -54,12 +65,16 @@ public class GlobalGameHandler : MonoBehaviour
         if(buildIndex == 3 || buildIndex == 4 || buildIndex == 6 || buildIndex == 7 || buildIndex == 9)
         {
             gameOverScreen = GameObject.Find("GameOverScreen");
+            exitButton = GameObject.Find("ExitButton");
+            continueButton = GameObject.Find("ContinueButton");
         }
     }
 
     private void enableGameOver()
     {
-        gameOverScreen.SetActive(true);
+        gameOverScreen.GetComponentInChildren<Canvas>().enabled = true;
+        exitButton.GetComponent<Canvas>().enabled = true;
+        continueButton.GetComponent<Canvas>().enabled = true;
     }
 
     private void showGameOverIfDead()

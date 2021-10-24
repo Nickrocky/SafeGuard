@@ -87,46 +87,46 @@ public class PlayerController : MonoBehaviour
         switch (bulletCharges)
         {
             case 1:
-                BulletIndicator1.active = true;
-                BulletIndicator2.active = false;
-                BulletIndicator3.active = false;
-                BulletIndicator4.active = false;
-                BulletIndicator5.active = false;
+                BulletIndicator1.SetActive(true);
+                BulletIndicator2.SetActive(false);
+                BulletIndicator3.SetActive(false);
+                BulletIndicator4.SetActive(false);
+                BulletIndicator5.SetActive(false);
                 break;
             case 2:
-                BulletIndicator1.active = true;
-                BulletIndicator2.active = true;
-                BulletIndicator3.active = false;
-                BulletIndicator4.active = false;
-                BulletIndicator5.active = false;
+                BulletIndicator1.SetActive(true);
+                BulletIndicator2.SetActive(true);
+                BulletIndicator3.SetActive(false);
+                BulletIndicator4.SetActive(false);
+                BulletIndicator5.SetActive(false);
                 break;
             case 3:
-                BulletIndicator1.active = true;
-                BulletIndicator2.active = true;
-                BulletIndicator3.active = true;
-                BulletIndicator4.active = false;
-                BulletIndicator5.active = false;
+                BulletIndicator1.SetActive(true);
+                BulletIndicator2.SetActive(true);
+                BulletIndicator3.SetActive(true);
+                BulletIndicator4.SetActive(false);
+                BulletIndicator5.SetActive(false);
                 break;
             case 4:
-                BulletIndicator1.active = true;
-                BulletIndicator2.active = true;
-                BulletIndicator3.active = true;
-                BulletIndicator4.active = true;
-                BulletIndicator5.active = false;
+                BulletIndicator1.SetActive(true);
+                BulletIndicator2.SetActive(true);
+                BulletIndicator3.SetActive(true);
+                BulletIndicator4.SetActive(true);
+                BulletIndicator5.SetActive(false);
                 break;
             case 5:
-                BulletIndicator1.active = true;
-                BulletIndicator2.active = true;
-                BulletIndicator3.active = true;
-                BulletIndicator4.active = true;
-                BulletIndicator5.active = true;
+                BulletIndicator1.SetActive(true);
+                BulletIndicator2.SetActive(true);
+                BulletIndicator3.SetActive(true);
+                BulletIndicator4.SetActive(true);
+                BulletIndicator5.SetActive(true);
                 break;
             default:
-                BulletIndicator1.active = false;
-                BulletIndicator2.active = false;
-                BulletIndicator3.active = false;
-                BulletIndicator4.active = false;
-                BulletIndicator5.active = false;
+                BulletIndicator1.SetActive(false);
+                BulletIndicator2.SetActive(false);
+                BulletIndicator3.SetActive(false);
+                BulletIndicator4.SetActive(false);
+                BulletIndicator5.SetActive(false);
                 break;
         }
     }

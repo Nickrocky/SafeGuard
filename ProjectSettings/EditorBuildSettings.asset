@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainWorld.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/ChedGame.unity
+    guid: a0de0965d0825174abcb52d09f52a266
+  - enabled: 1
+    path: Assets/Scenes/LimelightGame.unity
+    guid: 58147a8aa5d0d93478f4672c38838dde
+  - enabled: 1
+    path: Assets/Scenes/AndromedaGame.unity
+    guid: 6dc93a4b6143a914f9ecabb977e2b207
+  - enabled: 1
+    path: Assets/Scenes/ProximaGame.unity
+    guid: 8669d02332dfea942a891e6d57821211
+  - enabled: 1
+    path: Assets/Scenes/AndroximaGame.unity
+    guid: 0ed9f05a8980d1342951afa73f0d814e
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 7846b4fb087b66f4bb751ed566129f45
   m_configObjects: {}
